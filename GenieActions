@@ -1,0 +1,4 @@
+action instant put target when ^Your concentration lapses|^Your target pattern dissipates
+action instant put cast when ^Your formation|^You feel fully prepared
+action instant put stand when ^You should stand up first.|^You slowly tip over|cannot manage to stand.
+action (retry) send #queue clear; pause .1; #send 1 $lastcommand when ^Sorry, you may only type
