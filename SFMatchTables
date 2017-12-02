@@ -1,0 +1,23 @@
+start:
+matchre target /^Your concentration lapses|^Your target pattern dissipates/i
+matchre cast /^Your formation|^You feel fully prepared/i
+matchre stand /^You should stand up first.|^You slowly tip over|cannot manage to stand./i
+put look
+matchwait
+
+target:
+put target
+pause 3
+goto start
+
+cast:
+put cast
+pause 3
+goto start
+
+stand:
+match stand cannot manage to stand
+match stand ...wait
+match start You stand
+put stand
+matchwait
